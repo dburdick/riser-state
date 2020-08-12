@@ -15,5 +15,5 @@ metadata:
 spec:
   traffic:
   - percent: 100
-    revisionName: testdummy-4
-    tag: r4
+    revisionName: testdummy-3
+    tag: r3
