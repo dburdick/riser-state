@@ -3,7 +3,7 @@ apiVersion: serving.knative.dev/v1
 kind: Configuration
 metadata:
   annotations:
-    riser.dev/revision: "3"
+    riser.dev/revision: "4"
     riser.dev/server-version: v0.0.36
   creationTimestamp: null
   labels:
@@ -16,14 +16,14 @@ spec:
   template:
     metadata:
       annotations:
-        riser.dev/revision: "3"
+        riser.dev/revision: "4"
         riser.dev/server-version: v0.0.36
       creationTimestamp: null
       labels:
         riser.dev/app: testdummy
         riser.dev/deployment: testdummy
         riser.dev/environment: demo
-      name: testdummy-3
+      name: testdummy-4
     spec:
       containers:
       - env:
@@ -40,14 +40,14 @@ spec:
         - name: RISER_DEPLOYMENT
           value: testdummy
         - name: RISER_DEPLOYMENT_REVISION
-          value: "3"
+          value: "4"
         - name: RISER_ENVIRONMENT
           value: demo
         - name: RISER_NAMESPACE
           value: apps
         - name: TESTDUMMY_ENABLE_ENV
           value: "true"
-        image: tshak/testdummy:0.1.2
+        image: tshak/testdummy:0.1.1
         name: testdummy
         ports:
         - containerPort: 8000
