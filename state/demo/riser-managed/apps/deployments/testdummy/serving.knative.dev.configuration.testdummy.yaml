@@ -3,7 +3,7 @@ apiVersion: serving.knative.dev/v1
 kind: Configuration
 metadata:
   annotations:
-    riser.dev/revision: "2"
+    riser.dev/revision: "3"
     riser.dev/server-version: v0.0.36
   creationTimestamp: null
   labels:
@@ -16,25 +16,31 @@ spec:
   template:
     metadata:
       annotations:
-        riser.dev/revision: "2"
+        riser.dev/revision: "3"
         riser.dev/server-version: v0.0.36
       creationTimestamp: null
       labels:
         riser.dev/app: testdummy
         riser.dev/deployment: testdummy
         riser.dev/environment: demo
-      name: testdummy-2
+      name: testdummy-3
     spec:
       containers:
       - env:
         - name: MEANING
           value: "42"
+        - name: MYSECRET
+          valueFrom:
+            secretKeyRef:
+              key: data
+              name: testdummy-mysecret-0
+              optional: false
         - name: RISER_APP
           value: testdummy
         - name: RISER_DEPLOYMENT
           value: testdummy
         - name: RISER_DEPLOYMENT_REVISION
-          value: "2"
+          value: "3"
         - name: RISER_ENVIRONMENT
           value: demo
         - name: RISER_NAMESPACE
