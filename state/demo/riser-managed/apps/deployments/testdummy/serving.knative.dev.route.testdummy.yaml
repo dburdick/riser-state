@@ -14,9 +14,9 @@ metadata:
   namespace: apps
 spec:
   traffic:
-  - percent: 0
-    revisionName: testdummy-7
-    tag: r7
-  - percent: 100
+  - percent: 50
     revisionName: testdummy-6
     tag: r6
+  - percent: 50
+    revisionName: testdummy-7
+    tag: r7
