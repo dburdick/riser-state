@@ -3,7 +3,7 @@ apiVersion: serving.knative.dev/v1
 kind: Route
 metadata:
   annotations:
-    riser.dev/revision: "5"
+    riser.dev/revision: "6"
     riser.dev/server-version: v0.0.36
   creationTimestamp: null
   labels:
@@ -15,5 +15,5 @@ metadata:
 spec:
   traffic:
   - percent: 100
-    revisionName: testdummy-5
-    tag: r5
+    revisionName: testdummy-6
+    tag: r6
